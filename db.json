@@ -28,8 +28,16 @@
     },
     {
       "id": "ES9121000418450200051332",
-      "balance": 0,
-      "transactions": [],
+      "balance": 10000,
+      "transactions": [
+        {
+          "dateTime": "7/26/2024, 3:22:32 PM",
+          "amount": 10000,
+          "balance": 10000,
+          "receiverId": null,
+          "type": "deposit"
+        }
+      ],
       "accountHolder": "Diana Prince"
     },
     {
