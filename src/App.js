@@ -12,8 +12,6 @@ const App = () => {
   const [formType, setFormType] = useState(null);
   const [showAlert, setShowAlert] = useState(false);
   const [alertMessage, setAlertMessage] = useState('');
-
-  // States for filtering and pagination
   const [filterType, setFilterType] = useState('');
   const [startDate, setStartDate] = useState('');
   const [endDate, setEndDate] = useState('');
@@ -251,7 +249,6 @@ const App = () => {
           <Card.Body>
             <Card.Title>Account Statement</Card.Title>
 
-            {/* Filtering Options */}
             <Form className="mb-3">
               <Row>
                 <Col>
@@ -280,7 +277,6 @@ const App = () => {
               </Row>
             </Form>
 
-            {/* Sort Order */}
             <Form.Group className="mb-3">
               <Form.Label>Sort by Date</Form.Label>
               <Form.Control as="select" value={sortOrder} onChange={(e) => setSortOrder(e.target.value)}>
@@ -289,7 +285,6 @@ const App = () => {
               </Form.Control>
             </Form.Group>
 
-            {/* Transactions Table */}
             <Table striped bordered hover>
               <thead>
                 <tr>
@@ -313,7 +308,6 @@ const App = () => {
               </tbody>
             </Table>
 
-            {/* Pagination Controls */}
             <div className="d-flex justify-content-between">
               <Button
                 onClick={() => setCurrentPage(1)}
