@@ -1,70 +1,94 @@
-# Getting Started with Create React App
+# Bank Account Kata
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a React application that simulates a banking system, allowing users to perform transactions, view their account balance, and access their transaction history. For simplicity, the application uses local storage for data persistence. Optionally, you can use `json-server` to simulate a backend API.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Frontend:** React application for user interface.
+- **Data Persistence:** Local storage for storing account information and transactions.
+- **Mock Server (Optional):** `json-server` for simulating a backend API.
 
-### `npm start`
+## Getting Started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Follow these instructions to set up and run the project.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 1. Initialize the React Project
 
-### `npm test`
+1. **Create a new React application:**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+   ```bash
+   npx create-react-app bank-account-kata
+   cd bank-account-kata
+   ```
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 2. Using Local Storage for Data Persistence
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The application uses local storage to persist account data and transactions. You do not need to install additional libraries for this purpose.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 3. (Optional) Setting Up a Mock Server with `json-server`
 
-### `npm run eject`
+To simulate a backend API, you can use `json-server`:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. **Install `json-server` globally:**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   ```bash
+   npm install -g json-server
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+2. **Create a `db.json` file in the root directory of your project:**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   ```json
+   {
+     "accounts": [
+        {
+        "id": "CH9300762011623852957",
+        "balance": 0,
+        "transactions": [],
+        "accountHolder": "Ian Malcolm"
+      },
+      {
+        "id": "AT611904300234573201",
+        "balance": 0,
+        "transactions": [],
+        "accountHolder": "Jill Valentine"
+      }
+     ]
+   }
+   ```
 
-## Learn More
+3. **Run `json-server` to start the mock server:**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+   ```bash
+   json-server --watch db.json --port 5000
+   ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+   This command will start a mock server that listens on port 5000 and serves the data from `db.json`.
 
-### Code Splitting
+### 4. Configuring the React Application
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Update your React application to fetch and interact with data from the `json-server` API. Ensure you replace the API URLs in your code with the appropriate endpoints provided by `json-server`.
 
-### Analyzing the Bundle Size
+### 5. Running the Application
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+1. **Start the React development server:**
 
-### Making a Progressive Web App
+   ```bash
+   npm start
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+   The application will be accessible at [http://localhost:3000](http://localhost:3000).
 
-### Advanced Configuration
+2. **If using `json-server`, ensure it is running in parallel:**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+   ```bash
+   json-server --watch db.json --port 5000
+   ```
 
-### Deployment
+### Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+If you would like to contribute to this project, please fork the repository and submit a pull request with your changes.
 
-### `npm run build` fails to minify
+### License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
