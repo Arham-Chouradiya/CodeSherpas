@@ -1,0 +1,94 @@
+{
+  "accounts": [
+    {
+      "id": "DE89370400440532013000",
+      "balance": 0,
+      "transactions": [],
+      "accountHolder": "Alice Johnson"
+    },
+    {
+      "id": "GB29NWBK60161331926819",
+      "balance": 500,
+      "transactions": [
+        {
+          "dateTime": "7/26/2024, 3:09:54 PM",
+          "amount": 500,
+          "balance": 500,
+          "receiverId": "BE68539007547034",
+          "type": "transfer"
+        }
+      ],
+      "accountHolder": "Bob Smith"
+    },
+    {
+      "id": "FR1420041010050500013M02606",
+      "balance": 0,
+      "transactions": [],
+      "accountHolder": "Charlie Brown"
+    },
+    {
+      "id": "ES9121000418450200051332",
+      "balance": 0,
+      "transactions": [],
+      "accountHolder": "Diana Prince"
+    },
+    {
+      "id": "IT60X0542811101000000123456",
+      "balance": 0,
+      "transactions": [],
+      "accountHolder": "Edward Cullen"
+    },
+    {
+      "id": "NL91ABNA0417164300",
+      "balance": 0,
+      "transactions": [],
+      "accountHolder": "Fiona Gallagher"
+    },
+    {
+      "id": "BE68539007547034",
+      "balance": 450,
+      "transactions": [
+        {
+          "dateTime": "7/26/2024, 3:09:54 PM",
+          "amount": -500,
+          "balance": 450,
+          "receiverId": "GB29NWBK60161331926819",
+          "type": "transfer"
+        },
+        {
+          "dateTime": "7/26/2024, 3:09:42 PM",
+          "amount": -50,
+          "balance": 950,
+          "receiverId": null,
+          "type": "withdrawal"
+        },
+        {
+          "dateTime": "7/26/2024, 3:09:35 PM",
+          "amount": 1000,
+          "balance": 1000,
+          "receiverId": null,
+          "type": "deposit"
+        }
+      ],
+      "accountHolder": "George Bailey"
+    },
+    {
+      "id": "SE3550000000054910000003",
+      "balance": 0,
+      "transactions": [],
+      "accountHolder": "Hannah Montana"
+    },
+    {
+      "id": "CH9300762011623852957",
+      "balance": 0,
+      "transactions": [],
+      "accountHolder": "Ian Malcolm"
+    },
+    {
+      "id": "AT611904300234573201",
+      "balance": 0,
+      "transactions": [],
+      "accountHolder": "Jill Valentine"
+    }
+  ]
+}
